@@ -25,11 +25,21 @@ public class HUtils {
     private static Context mContext;
     private static boolean DEBUG = false;
 
+    /********************************初始化 相关**************************************/
+
     /**
      * 初始化 HUtils，
      * @param app Application 运行实例
      */
     public static void initialize(Application app){
+        mContext = app.getApplicationContext();
+    }
+
+    /**
+     * 初始化 HUtils，
+     * @param app Application 运行实例
+     */
+    public static void destroy(Application app){
         mContext = app.getApplicationContext();
     }
 
