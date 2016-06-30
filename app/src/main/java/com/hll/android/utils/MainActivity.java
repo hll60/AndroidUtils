@@ -1,4 +1,4 @@
-package com.hll.android.demo;
+package com.hll.android.utils;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

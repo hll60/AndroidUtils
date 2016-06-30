@@ -1,4 +1,4 @@
-package com.hll.android.demo;
+package com.hll.android.utils;
 
 import org.junit.Test;
 

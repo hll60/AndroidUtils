@@ -1,4 +1,4 @@
-package com.hll.android.demo;
+package com.hll.android.utils;
 
 import android.app.Activity;
 import android.app.Application;
