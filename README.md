@@ -1,6 +1,14 @@
 # AndroidUtils
 Android-Utils 安卓常用工具集合
 
+###添加依赖
+    repositories {  
+        maven { url "https://jitpack.io" }  
+    }  
+    dependencies {
+        compile 'com.github.jitpack:gradle-simple:1.0'
+    }
+  
 
 Utils工具类：
 * Log日志功能，设置Debug模式后打印日志
