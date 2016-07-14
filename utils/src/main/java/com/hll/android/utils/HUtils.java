@@ -61,11 +61,11 @@ public class HUtils {
         }
     }
 
-    public static void showToast(String text){
+    public static void showToast(CharSequence text){
         Toast.makeText(mContext, text, Toast.LENGTH_SHORT).show();
     }
 
-    public static void showToastLong(String text){
+    public static void showToastLong(CharSequence text){
         Toast.makeText(mContext, text, Toast.LENGTH_LONG).show();
     }
 
