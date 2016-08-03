@@ -6,7 +6,7 @@ Android-Utils 安卓常用工具集合
         maven { url "https://jitpack.io" }  
     }  
     dependencies {  
-        compile 'com.github.huangliulin:AndroidUtils:1.0'  
+        compile 'com.github.huangliulin:AndroidUtils:1.0.2'  
     }
   
 
