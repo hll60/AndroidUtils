@@ -257,13 +257,23 @@ public class HUtils {
      * @param data
      * @return
      */
-     public static String convertToHexString(byte data[]) {
-          StringBuffer strBuffer = new StringBuffer();
-          for (int i = 0; i < data.length; i++) {
-           strBuffer.append(Integer.toHexString(0xff & data[i]));
-          }
-          return strBuffer.toString();
-     }
+    public static String convertToHexString(byte[] data) {
+        StringBuffer strBuffer = new StringBuffer();
+
+        for (int i = 0; i < data.length; i++)
+        {
+            if (Integer.toHexString(0xff & data[i]).length() == 1)
+            {
+                strBuffer.append("0").append(Integer.toHexString(0xff & data[i]));
+            }
+            else
+            {
+                strBuffer.append(Integer.toHexString(0xff & data[i]));
+            }
+        }
+
+        return strBuffer.toString();
+    }
 
     /********************************字符串操作 相关**************************************/
 
