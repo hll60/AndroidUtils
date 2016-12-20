@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
+import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -239,10 +240,13 @@ public class HUtils {
         MessageDigest md5 = null;
         try {
             md5 = MessageDigest.getInstance("MD5");
-            md5.update(data.getBytes());
+            md5.update(data.getBytes("UTF8"));
             byte[] m = md5.digest();//加密
             return convertToHexString(m);
         } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
+        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
             return null;
         }
