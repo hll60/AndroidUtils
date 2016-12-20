@@ -241,13 +241,25 @@ public class HUtils {
             md5 = MessageDigest.getInstance("MD5");
             md5.update(data.getBytes());
             byte[] m = md5.digest();//加密
-            return Base64.encodeToString(m, Base64.DEFAULT);
+            return convertToHexString(m);
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
             return null;
         }
     }
 
+    /**
+     * byte[] 转 String
+     * @param data
+     * @return
+     */
+     public static String convertToHexString(byte data[]) {
+          StringBuffer strBuffer = new StringBuffer();
+          for (int i = 0; i < data.length; i++) {
+           strBuffer.append(Integer.toHexString(0xff & data[i]));
+          }
+          return strBuffer.toString();
+     }
 
     /********************************字符串操作 相关**************************************/
 
